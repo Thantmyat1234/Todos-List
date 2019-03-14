@@ -1,0 +1,1 @@
+This is the small Todos List sample project for Beginner Level.
