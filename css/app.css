@@ -6,30 +6,6 @@ body {
 	background:#102D60;
 }
 
-#container {
-	width:400px;
-	margin:100px auto 0;
-}
-
-#txt {
-	width:350px;
-	text-indent:10px;
-	line-height:30px;
-	border:none;
-	outline:none;
-	float:left;
-}
-
-#btn {
-	width:50px;
-	height:30px;
-	border:none;
-	outline:none;
-	border-radius:0;
-	background:#16A05D;
-	color:#fff;
-}
-
 #btn:hover {
 	background:#286128;
 }
