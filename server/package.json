@@ -1,0 +1,27 @@
+{
+  "name": "youtube-api-proxy-server",
+  "version": "1.0.0",
+  "description": "Build minimal api proxy server with Node and Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thantmyat31/youtube-api-proxy-server.git"
+  },
+  "author": "Thant Myat Sin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thantmyat31/youtube-api-proxy-server/issues"
+  },
+  "homepage": "https://github.com/thantmyat31/youtube-api-proxy-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1"
+  }
+}
