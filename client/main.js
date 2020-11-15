@@ -31,19 +31,36 @@ const renderItems = (items) => {
         const title = video.snippet.title;
         const description = video.snippet.description;
         const link = `https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}`;
-        const card = `
-        <div class="col-md-4 col-sm-6" id=${id}>
-            <div class="card">
-                <img class="card-img-top" src=${url} alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">${title}</h5>
-                    <p class="card-text">${description}</p>
-                    <a href=${link} class="btn btn-primary" target="_blank"><i class="fas fa-eye"></i> Watch</a>
-                </div>
-            </div>
-        </div>
-        `;
-        videosList.innerHTML += card;
+        
+        const col = document.createElement('div');
+        const card = document.createElement('div');
+        const img = document.createElement('img');
+        const cardBody = document.createElement('div');
+        const h5 = document.createElement('h5');
+        const p = document.createElement('p');
+        const a = document.createElement('a');
+
+        col.setAttribute('class', 'col-md-4 col-sm-6');
+        col.setAttribute('id', id);
+        card.setAttribute('class', 'card');
+        img.setAttribute('class', 'card-img-top');
+        img.setAttribute('src', url);
+        img.setAttribute('alt', 'card image cap');
+        cardBody.setAttribute('class', 'card-body');
+        h5.setAttribute('class', 'card-title');
+        h5.textContent = title;
+        p.setAttribute('class', 'card-text');
+        p.textContent = description;
+        a.setAttribute('class', 'btn btn-primary');
+        a.href = link;
+        a.setAttribute('target', '_blank');
+        a.innerHTML = '<i class="fas fa-eye"></i> Watch</a>';
+
+        cardBody.append(h5, p, a);
+        card.append(img, cardBody);
+        col.appendChild(card);
+
+        videosList.appendChild(col);
     });
 }
 

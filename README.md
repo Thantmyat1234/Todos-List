@@ -13,4 +13,4 @@
 * [x] Add results to page
 * [x] Add filter from to page
 * [x] Filter list on keyup
-* [] Deploy
+* [x] Deploy
